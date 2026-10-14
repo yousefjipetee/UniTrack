@@ -1,57 +1,125 @@
+# UniTrack – University Course Management System
 
-# UniTrack — University Course Management System
+UniTrack is a full-stack University Course Management System designed specifically for Computer Science students.
 
-UniTrack is a university course management web application designed to organize academic information and simplify course registration and administration.
+The system provides a secure and responsive platform for managing university courses, instructors, students, departments, and course enrollments.
 
-## Features
+---
 
-- Student and administrator functionality
-- Course management
+## Project Overview
+
+UniTrack was developed as a full-stack web application using PHP, MySQL, HTML, CSS, and JavaScript.
+
+The system contains two main user roles:
+
+- Administrator
+- Student
+
+Each role has different permissions and access levels.
+
+---
+
+## Main Features
+
+### Authentication
+
+- Student registration
+- Secure login
+- Logout
+- Session management
+- Password hashing using `password_hash()`
+- Password verification using `password_verify()`
+- Protected pages
+- Role-based authorization
+
+### Student Features
+
+Students can:
+
+- Access their dashboard
+- Browse available Computer Science courses
+- Search for courses
+- View course details
+- View instructor information
+- Enroll in courses
+- Drop enrolled courses
+- View currently enrolled courses
+- View course history
+- Update their profile information
+
+### Administrator Features
+
+Administrators can:
+
+- Access the administrator dashboard
+- View system statistics
+- Manage courses
+- Create courses
+- Edit courses
+- Delete courses
+- Manage students
+- Edit student information
+- Delete students
+- Manage instructors
+- Create instructors
+- Edit instructors
+- Delete instructors
+- Manage departments
+- Create departments
+- Edit departments
+- Delete departments
+
+---
+
+## Security Features
+
+Security is an important part of UniTrack.
+
+The project implements:
+
+- Prepared SQL statements
+- Password hashing
+- Password verification
+- Session-based authentication
+- Role-based authorization
+- CSRF protection
+- Server-side validation
+- Client-side validation
+- HTML validation
+- Encrypted sensitive user data
+- AES-256-GCM encryption
+- Protected administrative pages
+
+Passwords are never stored as plain text.
+
+Sensitive information such as the user's phone number is encrypted before being stored in the database.
+
+---
+
+## AJAX Functionality
+
+UniTrack uses JavaScript and AJAX to provide dynamic interactions without unnecessary page reloads.
+
+Examples include:
+
 - Course enrollment
-- Instructor and department management
-- Database-backed application using MySQL
-- User authentication and role-based access control
+- Course dropping
+- Enrollment status updates
+- Dynamic course search
+- Student search
+- Dynamic interface updates
 
-## Tech Stack
+The AJAX workflow follows:
 
-- PHP
-- MySQL
-- HTML5
-- CSS3
-- JavaScript
-
-## Requirements
-
-- PHP
-- MySQL or MariaDB
-- Apache web server (for example, through XAMPP)
-- A web browser
-
-## Installation
-
-1. Clone or download this repository.
-2. Place the project in your local web server directory.
-3. Create a MySQL database for UniTrack.
-4. Import the project's database schema or SQL file, if included.
-5. Copy `includes/config.example.php` to `includes/config.php`.
-6. Configure your local database credentials and required application settings.
-7. Start Apache and MySQL.
-8. Open the project through your local web server.
-
-## Security
-
-- Never commit real database credentials, encryption keys, or other secrets.
-- Use a unique, secure configuration for each environment.
-- Use test data when demonstrating the application.
-
-## Project Status
-
-Developed as a portfolio project to demonstrate web development and database skills.
-
-## Author
-
-**Yousef Jipetee**
-
-- GitHub: [yousefjipetee](https://github.com/yousefjipetee)
-- LinkedIn: [Yousef Jipetee](https://www.linkedin.com/in/yousef-jipetee-4395213b7/)
-- Email: ywsfjbyty@gmail.com
+```text
+JavaScript
+    ↓
+Fetch Request
+    ↓
+PHP API
+    ↓
+MySQL Database
+    ↓
+PHP Response
+    ↓
+JavaScript DOM Update
